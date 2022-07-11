@@ -1,7 +1,7 @@
 import { Shape } from "./Shape";
 import { Resizeable } from './resizeable'
 
-export class Rectangle extends Shape implements Resizeable {
+export class Rectangle extends Shape implements Resizeable, Colorable {
     width: number;
     height: number;
     length: number;
@@ -24,5 +24,8 @@ export class Rectangle extends Shape implements Resizeable {
     }
     resize(percent: number) {
         return this.width *= percent, this.length *= percent
+    }
+    Colorable(): string {
+        return 'I love you, I love you, I love you, I love you, I love'
     }
 }
